@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Monaco Editor custom styles */
+.monaco-editor {
+  background-color: #1e1e1e !important;
+}
+
+.monaco-editor .margin {
+  background-color: #1e1e1e !important;
+}
+
+.monaco-editor-background {
+  background-color: #1e1e1e !important;
+}
+
+/* Remote cursor styles */
+.remote-cursor {
+  position: relative;
+  border-left: 2px solid #ff6b6b;
+  z-index: 1000;
+}
+
+.remote-cursor::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  width: 6px;
+  height: 6px;
+  background-color: #ff6b6b;
+  border-radius: 50%;
+  z-index: 1001;
+}
+
+.remote-selection {
+  background-color: rgba(255, 107, 107, 0.2) !important;
+}
+
+/* Different colors for different users */
+.remote-cursor-1 {
+  border-left-color: #4ecdc4;
+}
+.remote-cursor-1::before {
+  background-color: #4ecdc4;
+}
+.remote-selection-1 {
+  background-color: rgba(78, 205, 196, 0.2) !important;
+}
+
+.remote-cursor-2 {
+  border-left-color: #45b7d1;
+}
+.remote-cursor-2::before {
+  background-color: #45b7d1;
+}
+.remote-selection-2 {
+  background-color: rgba(69, 183, 209, 0.2) !important;
+}
+
+.remote-cursor-3 {
+  border-left-color: #f9ca24;
+}
+.remote-cursor-3::before {
+  background-color: #f9ca24;
+}
+.remote-selection-3 {
+  background-color: rgba(249, 202, 36, 0.2) !important;
+}
+
+.remote-cursor-4 {
+  border-left-color: #6c5ce7;
+}
+.remote-cursor-4::before {
+  background-color: #6c5ce7;
+}
+.remote-selection-4 {
+  background-color: rgba(108, 92, 231, 0.2) !important;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Focus styles */
+input:focus,
+select:focus,
+button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed text-white px-4 py-2 rounded-lg font-medium transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-gray-600 hover:bg-gray-700 disabled:bg-gray-800 disabled:cursor-not-allowed text-white px-4 py-2 rounded-lg font-medium transition-colors;
+}
+
+.btn-success {
+  @apply bg-green-600 hover:bg-green-700 disabled:bg-green-800 disabled:cursor-not-allowed text-white px-4 py-2 rounded-lg font-medium transition-colors;
+}
+
+.btn-danger {
+  @apply bg-red-600 hover:bg-red-700 disabled:bg-red-800 disabled:cursor-not-allowed text-white px-4 py-2 rounded-lg font-medium transition-colors;
+}
+
+/* Loading spinner */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Notification styles */
+.notification {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Selection highlight for better visibility */
+::selection {
+  background-color: #3b82f6;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #3b82f6;
+  color: white;
+} 
