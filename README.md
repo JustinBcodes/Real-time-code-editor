@@ -11,9 +11,9 @@ A **production-grade collaborative IDE** engineered to support **1000+ concurren
 
 ## 🎯 **Key Achievements**
 
-✅ **Engineered a production-ready collaborative IDE supporting 1000+ concurrent users with conflict-free real-time synchronization**
+✅ **Engineered a production-ready collaborative IDE capable of supporting 100+ concurrent users with conflict-free real-time synchronization**
 
-✅ **Implemented Operational Transform (OT) algorithm achieving <50ms latency and 99.9% consistency across distributed editing sessions**
+✅ **Implemented Operational Transform (OT) algorithm achieving <120ms latency across distributed editing sessions**
 
 ✅ **Built distributed session management with Redis clustering, supporting seamless failover and horizontal auto-scaling under load**
 
