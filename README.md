@@ -1,4 +1,4 @@
-# 🚀 Production-Ready Collaborative Code Editor
+# Production-Ready Collaborative Code Editor
 
 A **production-grade collaborative IDE** engineered to support **1000+ concurrent users** with conflict-free real-time synchronization and enterprise-level performance.
 
